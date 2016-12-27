@@ -1,5 +1,5 @@
 {
   "scripts":{
-    "build": "./node_modules/gulp/bin/gulp.js"
+    "build": "./Users/yamada/node_modules/gulp/bin/gulp.js"
   }
 }

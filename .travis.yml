@@ -1,0 +1,17 @@
+language: node_js
+
+branches:
+  only:
+    - master
+
+before_script: bash ./bin/build.sh
+
+script:
+    - ls -al style.css
+
+after_success: bash ./bin/deploy.sh
+
+env:
+  global:
+  - GH_REF: github.com/yumayamada/citest.git
+  - secure: "VP807cFjVd+8nj3w2+/92568DqpSqt5q8ZHw9mQSmKMtgIThmEreqaB7j8wZo1p9adqRBrNRfUTR70BaUEGjUwrukOKPLq9D4cdM9W7ZQUmJdHRCwvLbkJbC5Z3YpVCuK+6UXIyfkl23dKvTRypY9S3LsnfywgJzLxDJP5kE0OU1YwOfZqbZtyUAOOe/fyLAVKtKNYEf3hRT6eZFgW5h+CI7ZE0w0GWr2cEIz/yAZrJLbwVpgpTGiQvbeU8oXGliK7neqrDHeZN0VjLLtmePXqJyukwUJzSwwVGBeiBhYm+bCWCAdaX4UI6yt7EWZpWpRDkBqFboqT4R2oNkOLnCGjNoW0PNE0S8uKFFCNDeFwaHi7MeNWxF4c+iNXzrrAfLGmJaWVd1BXGrga18Lt0jwJSDjHAxtMRubKqBdMC9luCqpM680mMM49vsyZUCqQdVDOLGne3T4tgV5I7CEBp0a/yhMb3mRJ1xgzkA3tCmqX+/FYmA7zeCwGCeg52hJW1kJjuaxukz40KFlxOBkBSGhiGHOrSROAAcxLmfR7Kz7eDAf5tbqYHr5SRPmnJ6UWUzN+H2TaJ5C31wdt2C7kiBMA/WKlnGhOEG+ntgq/kgSmoPhUNzEIbKliJTmgM0OCextg+ceKXUxBi2fCx/Ge8HQ+lJjJgDheMnLdDpgYx7X2g="
